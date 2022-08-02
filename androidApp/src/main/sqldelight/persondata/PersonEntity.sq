@@ -1,0 +1,29 @@
+
+-- https://play.kotlinlang.org/hands-on/Networking%20and%20Data%20Storage%20with%20Kotlin%20Multiplatfrom%20Mobile/05_Configuring_SQLDelight_an_implementing_cache
+CREATE TABLE PersonEntity (
+id INTEGER NOT NULL PRIMARY KEY,
+fName TEXT NOT NULL,
+LName TEXT NOT NULL
+);
+
+
+gerAllPersoms:
+SELECT *
+FROM PersonEntity;
+
+getPersonById:
+SELECT *
+FROM PersonEntity
+WHERE id = :id;
+
+insertPersonById:
+INSERT OR REPLACE
+INTO  PersonEntity
+VALUES (?,?,?);
+
+deleletPersonById:
+DELETE FROM PersonEntity
+WHERE id=:id;
+
+deleletAll:
+DELETE FROM PersonEntity;
